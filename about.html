@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazeMed - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="nav.js"></script>
+    <div class="container">
+        <section class="header">
+            <h1>About AmazeMed</h1>
+            <p class="intro">
+                AmazeMed is a dev shop where developers are doctors. We combine clinical expertise with software engineering to build productivity tools that healthcare professionals actually need.
+            </p>
+            <p>
+                Our unique approach comes from having team members who are both practicing physicians and experienced developers. This dual perspective allows us to understand problems from both sides—the clinical reality and the technical possibilities.
+            </p>
+        </section>
+
+        <section class="content">
+            <div class="section">
+                <h2>Mission</h2>
+                <p>
+                    AmazeMed was founded to bridge the gap between healthcare needs and technology solutions. Too often, healthcare software is built by developers who don't understand clinical workflows, or by clinicians who lack technical depth. We combine both.
+                </p>
+                <p>
+                    Our mission is to build tools that reduce administrative burden, enhance patient care, and integrate seamlessly into existing healthcare systems—all while maintaining the highest standards of clinical safety and technical excellence.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>The Physician-Developer Advantage</h2>
+                <p>
+                    What makes us different is that our developers are also physicians. This means:
+                </p>
+                <ul>
+                    <li>We understand clinical workflows because we live them daily</li>
+                    <li>We know what problems are worth solving and which ones aren't</li>
+                    <li>We can validate solutions in real clinical environments</li>
+                    <li>We build with clinical safety as a first principle, not an afterthought</li>
+                    <li>We speak both languages—clinical and technical—fluently</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Co-Founders</h2>
+                <p>
+                    <strong>Hanmu Yan, MD FRCSC</strong> is a practicing Canadian urologist, surgeon, and app builder. He works on AI trust and hallucination-free outputs for medicine, with a focus on building reliable, clinically-safe software systems. His expertise includes reliability engineering for LLMs, schema contracts, validation loops, and evidence anchoring. For him, surgery and software engineering are one mission—clinical work shows where AI fails, and coding fixes it.
+                </p>
+                <p>
+                    <strong>Dr. Ali Okhowat</strong> is a physician and bioethicist who currently serves as Co-Lead of the World Health Organization (WHO) Innovation Hub, based at WHO Headquarters in Geneva, Switzerland. In this role, he is responsible for scaling high-impact health innovations and cultivating an innovation culture throughout WHO. He previously worked as a Health Emergency Officer in WHO's Health Emergencies Programme, supporting humanitarian health response activities across multiple countries. Prior to joining WHO, he worked with the International Committee of the Red Cross (ICRC) in Gaza, Tajikistan, and Afghanistan. Dr. Okhowat is a graduate of the University of Toronto Medical School, McGill University's Family Medicine Residency and Clinician Scholar Program, and is an alumnus of Harvard Business School. He is currently completing his PhD in Bioethics at the University of Montreal.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Our Approach</h2>
+                <p>
+                    Every project starts with understanding the real problem. We don't build technology for its own sake—we build solutions that address genuine clinical needs. Our development approach emphasizes:
+                </p>
+                <ul>
+                    <li><strong>Clinical First:</strong> Every decision prioritizes clinical workflows and patient safety</li>
+                    <li><strong>Reliability:</strong> We build systems that are deterministic, verifiable, and safe</li>
+                    <li><strong>Integration:</strong> Tools that work with existing systems, not against them</li>
+                    <li><strong>Iteration:</strong> Rapid cycles of development and validation in real clinical contexts</li>
+                    <li><strong>Evidence-Based:</strong> Solutions grounded in clinical evidence and validated workflows</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Values</h2>
+                <ul>
+                    <li><strong>Clinical Safety:</strong> Patient safety and clinical appropriateness guide every decision</li>
+                    <li><strong>Technical Excellence:</strong> We build robust, maintainable, and scalable systems</li>
+                    <li><strong>Practical Innovation:</strong> Technology that solves real problems, not theoretical ones</li>
+                    <li><strong>Transparency:</strong> Clear communication about capabilities, limitations, and trade-offs</li>
+                    <li><strong>Collaboration:</strong> We work with healthcare organizations as partners, not vendors</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Interested in Working Together?</h2>
+            <p>We're always looking for new challenges and opportunities to build tools that make healthcare better.</p>
+            <p>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">View Services</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Force full width by finding and overriding constraining parent elements
+        (function() {
+            function forceFullWidth() {
+                const container = document.querySelector('.container');
+                if (!container) return;
+
+                let parent = container.parentElement;
+                while (parent && parent !== document.body) {
+                    const computedStyle = window.getComputedStyle(parent);
+                    const maxWidth = computedStyle.maxWidth;
+
+                    if (maxWidth && maxWidth !== 'none' && maxWidth !== '100%') {
+                        parent.style.setProperty('max-width', '100%', 'important');
+                        parent.style.setProperty('width', '100%', 'important');
+                    }
+
+                    parent = parent.parentElement;
+                }
+
+                container.style.setProperty('max-width', '100%', 'important');
+                container.style.setProperty('width', '100%', 'important');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceFullWidth);
+            } else {
+                forceFullWidth();
+            }
+
+            setTimeout(forceFullWidth, 100);
+            setTimeout(forceFullWidth, 500);
+        })();
+    </script>
+</body>
+</html>
+

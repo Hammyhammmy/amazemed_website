@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazeMed - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="nav.js"></script>
+    <div class="container">
+        <section class="header">
+            <h1>Contact Us</h1>
+            <p class="intro">
+                Interested in working together? We'd love to hear about your project and discuss how we can help.
+            </p>
+        </section>
+
+        <section class="content">
+            <div class="section">
+                <h2>Get in Touch</h2>
+                <p>
+                    Whether you have a specific project in mind, need consulting guidance, or just want to learn more about what we do, we're here to help.
+                </p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:contact@amazemed.com">contact@amazemed.com</a></p>
+                    <p>We typically respond within 1-2 business days.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>What to Include</h2>
+                <p>
+                    When reaching out, please include:
+                </p>
+                <ul>
+                    <li>A brief description of your project or needs</li>
+                    <li>Your organization or role</li>
+                    <li>Timeline or urgency (if applicable)</li>
+                    <li>Any specific questions you'd like us to address</li>
+                </ul>
+                <p>
+                    This helps us provide a more helpful initial response and determine if we're a good fit for your needs.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>What Happens Next</h2>
+                <p>
+                    After you reach out:
+                </p>
+                <ol>
+                    <li>We'll review your inquiry and respond within 1-2 business days</li>
+                    <li>If there's a good fit, we'll schedule a brief call to discuss your needs in more detail</li>
+                    <li>We'll provide an initial assessment and proposal if appropriate</li>
+                    <li>From there, we can move forward with a project plan tailored to your needs</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Get Started?</h2>
+            <p>Send us an email and let's discuss how we can help build solutions that make healthcare better.</p>
+            <p>
+                <a href="mailto:contact@amazemed.com">Send Email</a>
+                <a href="services.html">View Our Services</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Force full width by finding and overriding constraining parent elements
+        (function() {
+            function forceFullWidth() {
+                const container = document.querySelector('.container');
+                if (!container) return;
+
+                let parent = container.parentElement;
+                while (parent && parent !== document.body) {
+                    const computedStyle = window.getComputedStyle(parent);
+                    const maxWidth = computedStyle.maxWidth;
+
+                    if (maxWidth && maxWidth !== 'none' && maxWidth !== '100%') {
+                        parent.style.setProperty('max-width', '100%', 'important');
+                        parent.style.setProperty('width', '100%', 'important');
+                    }
+
+                    parent = parent.parentElement;
+                }
+
+                container.style.setProperty('max-width', '100%', 'important');
+                container.style.setProperty('width', '100%', 'important');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceFullWidth);
+            } else {
+                forceFullWidth();
+            }
+
+            setTimeout(forceFullWidth, 100);
+            setTimeout(forceFullWidth, 500);
+        })();
+    </script>
+</body>
+</html>
+

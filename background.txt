@@ -1,0 +1,22 @@
+Hanmu Yan, MD FRCSC is a practicing Canadian urologist and the founder of TranslationalAI. With a background in surgery and applied AI, he develops tools to solve real problems physicians encounter in clinical practice.
+Surgeon | App Builder and Reliability Engineering for LLMs
+
+I’m a practicing surgeon and healthtech founder working on one of AI’s biggest challenges: trust. Large language models hallucinate — and in medicine, that’s unacceptable.
+
+I’ve built, tested, and deployed AI tools that deliver hallucination-free outputs at the point of use. Using schema contracts, validation loops, and evidence anchoring, every statement in an AI output is validated against the source text before surfacing. If it’s not supported by the raw source, it never appears.
+
+For me, surgery and software engineering aren’t “two jobs” — they’re one mission. Clinical work shows me where AI fails; coding work fixes it. That dual perspective helps me build systems that are technically rigorous, clinically safe, and truly usable by doctors.
+
+Tools
+ • Partner in Practice — clinical decision support
+ • LightScribe — AI scribe
+ • ChartPrepper — chart prep assistant
+
+All designed to reduce admin work and enhance patient care.
+
+===
+
+Dr. Ali Okhowat
+Physician and Bioethicist, Co-Lead of the World Health Organization (WHO) Innovation Hub
+
+Dr. Ali Okhowat is a physician and bioethicist who is currently serving as Co-Lead of the World Health Organization (WHO) Innovation Hub, based at WHO Headquarters in Geneva, Switzerland. In this role he is responsible for helping to scale high-impact health innovations and cultivating an innovation culture throughout WHO HQ, and its Regional and Country Offices. He previously worked as a Health Emergency Officer in WHO’s Health Emergencies Programme based in Geneva and Cairo, the latter as part of his role in helping to establish the Emergency Operations team in the WHO’s Eastern Mediterranean Regional Office (EMRO). In this capacity he was responsible for supporting WHO's humanitarian health response activities in EMRO countries, including in Syria, Iraq, Yemen, Libya, Sudan, Somalia, Pakistan, Egypt, Lebanon, Jordan, and Afghanistan, among others. Prior to joining the WHO, he worked with the International Committee of the Red Cross (ICRC) in Gaza, Tajikistan, and Afghanistan. Ali is a graduate of the University of Toronto Medical School and Munk School of Global Affairs and Public Policy’s Fellowship in Global Journalism, McGill University’s Family Medicine Residency and Clinician Scholar Program and is an alumnus of Harvard Business School. He is currently completing his PhD in Bioethics at the University of Montreal.

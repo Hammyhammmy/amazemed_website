@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranslationalAI - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="nav.js"></script>
+    <div class="container">
+        <section class="hero">
+            <h1>TranslationalAI</h1>
+            <p class="intro">
+                Clinician-led AI tools powered by LightProof SDK for verifiable, source-anchored AI outputs. Our clinical tools—Partner in Practice, LightScribe, and ChartPrepper—are deployed in production environments.
+            </p>
+            <p>
+                LightProof SDK enforces provenance during generation. Every model statement is mapped to exact source text positions, and unverifiable spans are rejected. This prevents unverifiable output at generation time, unlike post-hoc validation tools.
+            </p>
+        </section>
+
+        <section class="products">
+            <div class="product">
+                <h2>Partner in Practice</h2>
+                <p>Clinical decision support tool that uses AI-assisted pathway generation, with final tools that are rules-based and deterministic. Designed by physicians for physicians, with pathways vetted by subject matter experts.</p>
+                <ul>
+                    <li>Evidence-based clinical pathways for complex treatment decisions</li>
+                    <li>Deterministic outputs—identical inputs yield identical recommendations</li>
+                    <li>Available for educational use at <a href="https://publicprostateland.onrender.com/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">publicprostateland.onrender.com</a></li>
+                </ul>
+            </div>
+
+            <div class="product">
+                <h2>LightScribe</h2>
+                <p>AI-powered medical scribe deployed in production. Generates consult notes, SOAP notes, and patient summaries using verifiable AI with source-anchored outputs.</p>
+                <ul>
+                    <li>Simple interface designed for clinical workflows</li>
+                    <li>Verifiable outputs with source attribution</li>
+                    <li>Deployed in real clinical environments</li>
+                </ul>
+            </div>
+
+            <div class="product">
+                <h2>ChartPrepper</h2>
+                <p>Referral summary tool deployed in production. Processes medical referrals to generate accurate, structured summaries that highlight critical clinical information.</p>
+                <ul>
+                    <li>Structured summaries with key clinical details highlighted</li>
+                    <li>Reduces cognitive load by removing filler content</li>
+                    <li>Deployed in real clinical environments</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Approach</h2>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <h3>Verifiable AI</h3>
+                    <p>LightProof SDK ensures every output can be traced to source material, with unverifiable content rejected at generation time.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Clinical Workflow Integration</h3>
+                    <p>Tools designed to integrate seamlessly into existing clinical workflows without requiring EMR integration.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Privacy and Security</h3>
+                    <p>End-to-end encryption, PHI filtering, and alignment with PIPEDA privacy principles. Self-assessed alignment with HIPAA security protocols (not certified).</p>
+                </div>
+                <div class="benefit">
+                    <h3>Canadian Data Sovereignty</h3>
+                    <p>All data stored and processed within Canada.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Production Deployment</h3>
+                    <p>Tools deployed in real clinical environments, demonstrating practical value in healthcare workflows.</p>
+                </div>
+            </div>
+            <p class="footer-note">
+                We're committed to advancing healthcare through rigorous, evidence-based AI development. Our tools are currently in pilot with select clinics and hospitals. We welcome research partnerships and academic collaborations.
+            </p>
+        </section>
+
+        <section class="cta">
+            <h2>Pilot Access and Research Collaboration</h2>
+            <p>Our clinical tools are available for pilot use with select institutions. We're seeking research partners to advance verifiable AI in healthcare.</p>
+            <p>
+                <a href="mailto:yan+websitesignup@translational.ca">Request Pilot Access</a> |
+                <a href="mailto:yan+enterpriseAPI@translational.ca">Contact for Collaboration</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Force full width by finding and overriding constraining parent elements
+        (function() {
+            function forceFullWidth() {
+                const container = document.querySelector('.container');
+                if (!container) return;
+
+                let parent = container.parentElement;
+                while (parent && parent !== document.body) {
+                    const computedStyle = window.getComputedStyle(parent);
+                    const maxWidth = computedStyle.maxWidth;
+
+                    if (maxWidth && maxWidth !== 'none' && maxWidth !== '100%') {
+                        parent.style.setProperty('max-width', '100%', 'important');
+                        parent.style.setProperty('width', '100%', 'important');
+                    }
+
+                    parent = parent.parentElement;
+                }
+
+                container.style.setProperty('max-width', '100%', 'important');
+                container.style.setProperty('width', '100%', 'important');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceFullWidth);
+            } else {
+                forceFullWidth();
+            }
+
+            setTimeout(forceFullWidth, 100);
+            setTimeout(forceFullWidth, 500);
+        })();
+    </script>
+</body>
+</html>

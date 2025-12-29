@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazeMed - Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="nav.js"></script>
+    <div class="container">
+        <section class="header">
+            <h1>Our Services</h1>
+            <p class="intro">
+                We offer a range of development and consulting services, all informed by our unique perspective as physician-developers.
+            </p>
+        </section>
+
+        <section class="services">
+            <div class="service">
+                <h2>Custom Software Development</h2>
+                <p>We build custom applications tailored to your healthcare organization's specific needs. From clinical decision support tools to administrative automation, we create solutions that integrate seamlessly into existing workflows.</p>
+                <ul>
+                    <li>Web and mobile application development</li>
+                    <li>Clinical workflow automation</li>
+                    <li>EMR integration and interoperability</li>
+                    <li>Data visualization and reporting tools</li>
+                    <li>API development and integration</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>AI & Machine Learning Solutions</h2>
+                <p>We specialize in building reliable, clinically-safe AI systems. Our approach emphasizes validation, evidence anchoring, and hallucination-free outputs—critical requirements for medical applications.</p>
+                <ul>
+                    <li>Clinical AI system development</li>
+                    <li>Reliability engineering for LLMs</li>
+                    <li>Evidence-anchored AI outputs</li>
+                    <li>Schema contracts and validation loops</li>
+                    <li>AI safety and compliance consulting</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>Healthcare Technology Consulting</h2>
+                <p>Leverage our unique perspective as physician-developers to guide your healthcare technology initiatives. We help organizations make informed decisions about technology adoption, workflow optimization, and digital transformation.</p>
+                <ul>
+                    <li>Technology strategy and planning</li>
+                    <li>Clinical workflow analysis and optimization</li>
+                    <li>Digital transformation roadmaps</li>
+                    <li>Vendor evaluation and selection</li>
+                    <li>Implementation planning and support</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>Product Development</h2>
+                <p>We help healthcare organizations and startups bring new products to market. From concept to deployment, we provide technical expertise informed by clinical understanding.</p>
+                <ul>
+                    <li>Product ideation and validation</li>
+                    <li>MVP development</li>
+                    <li>Clinical validation and testing</li>
+                    <li>Regulatory guidance (non-legal advice)</li>
+                    <li>Scalability and architecture planning</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Development Capabilities</h2>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <h3>Full-Stack Development</h3>
+                    <p>We build complete solutions from frontend interfaces to backend systems, databases, and APIs.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Cloud Infrastructure</h3>
+                    <p>We design and deploy scalable cloud architectures that meet healthcare security and compliance requirements.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Security & Compliance</h3>
+                    <p>We understand healthcare data requirements and build systems with security and privacy as foundational principles.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Integration Expertise</h3>
+                    <p>We specialize in integrating new tools with existing healthcare systems, including EMRs and clinical databases.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Rapid Prototyping</h3>
+                    <p>Our dual expertise allows us to quickly build and validate prototypes in real clinical contexts.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Ongoing Support</h3>
+                    <p>We provide maintenance, updates, and support to ensure your systems continue to meet evolving needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Our Development Approach</h2>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <h3>Problem-First</h3>
+                    <p>We start by deeply understanding the clinical problem before proposing technical solutions.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Iterative Development</h3>
+                    <p>We build in rapid cycles, validating with real users and clinical workflows at each stage.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Safety by Design</h3>
+                    <p>Clinical safety is built into every architectural and design decision, not added as an afterthought.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Evidence-Based</h3>
+                    <p>Our solutions are grounded in clinical evidence and validated against real-world workflows.</p>
+                </div>
+            </div>
+            <p class="footer-note">
+                Every project is unique, and we tailor our approach to your specific needs. Whether you need a quick prototype, a full production system, or strategic guidance, we're here to help.
+            </p>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Start a Project?</h2>
+            <p>Let's discuss how we can help build solutions that make a real difference in healthcare.</p>
+            <p>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">Learn More About Us</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Force full width by finding and overriding constraining parent elements
+        (function() {
+            function forceFullWidth() {
+                const container = document.querySelector('.container');
+                if (!container) return;
+
+                let parent = container.parentElement;
+                while (parent && parent !== document.body) {
+                    const computedStyle = window.getComputedStyle(parent);
+                    const maxWidth = computedStyle.maxWidth;
+
+                    if (maxWidth && maxWidth !== 'none' && maxWidth !== '100%') {
+                        parent.style.setProperty('max-width', '100%', 'important');
+                        parent.style.setProperty('width', '100%', 'important');
+                    }
+
+                    parent = parent.parentElement;
+                }
+
+                container.style.setProperty('max-width', '100%', 'important');
+                container.style.setProperty('width', '100%', 'important');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceFullWidth);
+            } else {
+                forceFullWidth();
+            }
+
+            setTimeout(forceFullWidth, 100);
+            setTimeout(forceFullWidth, 500);
+        })();
+    </script>
+</body>
+</html>
+

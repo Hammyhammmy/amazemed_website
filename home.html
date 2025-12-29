@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazeMed - Dev Shop by Developers Who Are Doctors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="nav.js"></script>
+    <div class="container">
+        <section class="hero">
+            <h1>AmazeMed</h1>
+            <p class="intro">
+                A dev shop where developers are doctors. We build productivity tools that healthcare professionals actually need, designed by those who understand both code and clinical workflows.
+            </p>
+            <p>
+                At AmazeMed, our team combines medical expertise with software engineering. We're not just developers who read about healthcare—we're physicians who code, surgeons who build, and clinicians who understand the real problems that need solving.
+            </p>
+        </section>
+
+        <section class="services">
+            <div class="service">
+                <h2>Custom Development</h2>
+                <p>We build custom software solutions tailored to healthcare workflows. From clinical decision support tools to administrative automation, we create applications that integrate seamlessly into existing healthcare systems.</p>
+                <ul>
+                    <li>Healthcare-specific application development</li>
+                    <li>Clinical workflow integration</li>
+                    <li>EMR-compatible solutions</li>
+                    <li>Mobile and web applications</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>AI & Machine Learning</h2>
+                <p>We specialize in building reliable, clinically-safe AI systems. Our approach emphasizes validation, evidence anchoring, and hallucination-free outputs—critical requirements for medical applications.</p>
+                <ul>
+                    <li>Reliable AI system development</li>
+                    <li>Evidence-anchored outputs</li>
+                    <li>Schema contracts and validation loops</li>
+                    <li>Clinical AI consulting</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>Consulting & Strategy</h2>
+                <p>Leverage our unique perspective as physician-developers to guide your healthcare technology initiatives. We help organizations make informed decisions about technology adoption, workflow optimization, and digital transformation.</p>
+                <ul>
+                    <li>Healthcare technology strategy</li>
+                    <li>Clinical workflow analysis</li>
+                    <li>Digital transformation consulting</li>
+                    <li>Product development guidance</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Why Physician-Developers Matter</h2>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <h3>Real Clinical Understanding</h3>
+                    <p>We've been in the trenches. We know the pain points, the workflows, and the constraints that healthcare professionals face daily.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Technical Excellence</h3>
+                    <p>Our developers are also practicing physicians, ensuring that technical solutions are both robust and clinically appropriate.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Workflow Integration</h3>
+                    <p>We design tools that fit naturally into clinical workflows, reducing cognitive load rather than adding to it.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Safety First</h3>
+                    <p>Clinical safety is built into every decision. We understand the stakes and build accordingly.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Rapid Iteration</h3>
+                    <p>Our dual expertise allows us to quickly identify problems, propose solutions, and validate them in real clinical contexts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Build Something?</h2>
+            <p>Whether you need a custom application, AI system, or strategic guidance, we're here to help.</p>
+            <p>
+                <a href="contact.html">Get in Touch</a>
+                <a href="services.html">Learn More</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Force full width by finding and overriding constraining parent elements
+        (function() {
+            function forceFullWidth() {
+                const container = document.querySelector('.container');
+                if (!container) return;
+
+                let parent = container.parentElement;
+                while (parent && parent !== document.body) {
+                    const computedStyle = window.getComputedStyle(parent);
+                    const maxWidth = computedStyle.maxWidth;
+
+                    if (maxWidth && maxWidth !== 'none' && maxWidth !== '100%') {
+                        parent.style.setProperty('max-width', '100%', 'important');
+                        parent.style.setProperty('width', '100%', 'important');
+                    }
+
+                    parent = parent.parentElement;
+                }
+
+                container.style.setProperty('max-width', '100%', 'important');
+                container.style.setProperty('width', '100%', 'important');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceFullWidth);
+            } else {
+                forceFullWidth();
+            }
+
+            setTimeout(forceFullWidth, 100);
+            setTimeout(forceFullWidth, 500);
+        })();
+    </script>
+</body>
+</html>
+
