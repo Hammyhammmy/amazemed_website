@@ -400,10 +400,10 @@ a:hover {
 /* ===== Hero Section ===== */
 .hero {
     margin-top: 0 !important;
-    margin-bottom: var(--spacing-2xl) !important;
-    padding: var(--spacing-2xl) var(--spacing-lg) !important;
-    padding-top: var(--spacing-2xl) !important;
-    padding-bottom: var(--spacing-2xl) !important;
+    margin-bottom: var(--spacing-xl) !important;
+    padding: var(--spacing-xl) var(--spacing-lg) !important;
+    padding-top: var(--spacing-xl) !important;
+    padding-bottom: var(--spacing-xl) !important;
     background: var(--white);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -422,11 +422,11 @@ a:hover {
 
 .hero-tagline {
     color: var(--green);
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
 }
 
 .hero h1 {
@@ -739,6 +739,126 @@ a:hover {
     margin-bottom: var(--spacing-xs);
 }
 
+/* ===== Stats Section ===== */
+.stats {
+    margin-bottom: var(--spacing-2xl);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-gray);
+    border-radius: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Feature Cards ===== */
+.feature-cards-wrapper {
+    margin-bottom: var(--spacing-2xl);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.feature-cards {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    animation: scroll-cards 30s linear infinite;
+    width: fit-content;
+}
+
+.feature-cards:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-cards {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - var(--spacing-lg)));
+    }
+}
+
+.feature-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 380px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    margin-top: 0;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin: 0;
+}
+
 /* ===== Benefits ===== */
 .benefits {
     margin-bottom: var(--spacing-2xl);
@@ -906,7 +1026,14 @@ a:hover {
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .container {
-        padding: var(--spacing-lg) var(--spacing-sm) !important;
+        padding: var(--spacing-md) var(--spacing-sm) !important;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg) var(--spacing-md) !important;
+        margin-bottom: var(--spacing-lg) !important;
     }
 
     .hero h1,
@@ -925,11 +1052,25 @@ a:hover {
     .hero-cta {
         flex-direction: column;
         align-items: stretch;
+        gap: var(--spacing-sm);
     }
     
     .hero-cta a {
         width: 100%;
         text-align: center;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .services {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .service {
+        margin-bottom: var(--spacing-lg);
+        padding: var(--spacing-lg);
     }
 
     .benefit-list {
