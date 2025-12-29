@@ -18,6 +18,9 @@
                 <li><a href="services.html" ${currentPage === 'services.html' ? 'class="active"' : ''}>Services</a></li>
                 <li><a href="contact.html" ${currentPage === 'contact.html' ? 'class="active"' : ''}>Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="nav-cta">Get Started</a>
+            </div>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>

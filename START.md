@@ -1,0 +1,1 @@
+cd /Users/work/python-local/amazemed_website && python3 -m http.server 8000
